@@ -3,9 +3,11 @@ import os
 import re
 
 
+
 import psycopg2
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
+
 
 @app.route('/login')
 def login():
@@ -17,9 +19,7 @@ def result():
         username = request.form['username']
         password = request.form['password']
 
-        conn = psycopg2.connect(host='localhost', user='postgres', password='flipcart')
-        conn.autocommit = True
-        cur = conn.cursor()
+        cur=connection()
         cur.execute("select username,password from usermaster")
         rows = cur.fetchall()
         for x in rows:
@@ -36,9 +36,7 @@ def create_form():
 @app.route('/register_form', methods=['POST'])
 def register_form():
     val = request.form
-    conn = psycopg2.connect(host='localhost', user='postgres', password='flipcart')
-    conn.autocommit = True
-    cur = conn.cursor()
+    cur = connection()
     username=session['username']
     query_user = "select userid from usermaster where username="+"'"+ username +"'"+";"
     cur.execute(query_user)
@@ -66,20 +64,33 @@ def register_form():
                 return e
     return "success"
 
-@app.route('/edit_form', methods=['POST'])
-def register_form():
+@app.route('/edit_form')
+def edit_form():
+    cur = connection()
+    query_userid="select userid from usermaster where username="+"'"+session['username']+"';"
+    cur.execute(query_userid)
+    user_id = cur.fetchall()
+    query_form="select templatemasterid,templatename from templatemaster where userid="+str(user_id[0][0])+";"
+    cur.execute(query_form)
+    form_details = cur.fetchall()
+    return render_template('edit_form.html',form_details=form_details,flag="edit_form")
+
+@app.route('/edit_form_data/<form_id>')
+def edit_form_data(form_id):
+    cur = connection()
+    query = "select fieldname from fieldmaster where templatemasterid="+"'"+form_id+"'"+";"
+    cur.execute(query)
+    field_name = cur.fetchall()
+    # query_field_name = "select fieldname from where templatemasterid="+"'"+str(template_id)+"';"
+    # cur.execute(query_field_name)
+    # field_name = cur.fetchall()
+    return render_template('edit_form.html',field_name=field_name,flag="edit_form_data")
+
+def connection():
     conn = psycopg2.connect(host='localhost', user='postgres', password='flipcart')
     conn.autocommit = True
     cur = conn.cursor()
-    query_userid="select userid from usermaster where userid="+"'"+session['username']+"';"
-    cur.execute(query_userid)
-    user_id = cur.fetchall()
-    quer_form="select templatename from templatemaster where userid="+str(user_id)+";"
-    cur.execute(quer_form)
-    form_name = cur.fetchall()
-    return render_template('edit_form',form_name=form_name)
-
-
+    return cur
 
 
 

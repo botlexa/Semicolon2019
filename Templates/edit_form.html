@@ -5,14 +5,27 @@
     <title>edit_form</title>
 </head>
 <body>
-    <table>
-        <tr>
-            <th>Form Name</th>
-        </tr>
-        <tr>
-        {% for x in {{form_name}}:%}
-            <td>{{x}}</td>
-        </tr>
-    </table>
+    {% if flag == 'edit_form'%}
+        <table border="1">
+            <tr>
+                <th>Form Name</th>
+            </tr>
+            {% for form_id,form_name in form_details: %}
+            <tr>
+                <td><a href="{{ 'http://localhost:5000/edit_form_data/'+ form_id|string }}">{{ form_name }}</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% elif flag == 'edit_form_data' %}
+        <table border="1">
+            <tr>
+                {% for val in field_name: %}
+                    <td>{{ val[0] }}</td>
+                {% endfor %}
+
+                <input type="button" value="edit"/>
+            </tr>
+        </table>
+    {% endif %}
 </body>
 </html>
