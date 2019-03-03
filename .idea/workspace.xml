@@ -7,15 +7,7 @@
       <change afterPath="$PROJECT_DIR$/../FirstWebProject/Project1/templates/login.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FirstWebProject/Project1/templates/result.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FirstWebProject/Project1/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Semicolon2019.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/create_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/view_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/welcome.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/edit_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/edit_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Test" beforeDir="false" afterPath="$PROJECT_DIR$/../Test" afterDir="false" />
     </list>
@@ -29,25 +21,28 @@
     <session id="2139195525">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.1" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="2" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="6" />
           <entry key="py" value="16" />
+          <entry key="txt" value="1" />
           <entry key="view_form" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="6" />
+          <entry key="PLAIN_TEXT" value="1" />
           <entry key="Python" value="16" />
           <entry key="XHTML" value="1" />
         </counts>
@@ -57,11 +52,13 @@
           <entry key="Python Console" value="39" />
           <entry key="html" value="1322" />
           <entry key="py" value="2088" />
+          <entry key="txt" value="88" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1322" />
+          <entry key="PLAIN_TEXT" value="88" />
           <entry key="Python" value="2127" />
         </counts>
       </usages-collector>
@@ -72,12 +69,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="142">
+              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
-                <marker date="1551551303924" expanded="true" signature="2569:2999" ph="..." />
-                <marker date="1551551303924" expanded="true" signature="3016:3170" ph="..." />
+                <marker date="1551600256622" expanded="true" signature="2566:2996" ph="..." />
+                <marker date="1551600256622" expanded="true" signature="3013:3167" ph="..." />
               </folding>
             </state>
           </provider>
@@ -86,8 +83,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Templates/edit_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state relative-caret-position="510">
+              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -149,8 +155,10 @@
         <option value="$PROJECT_DIR$/Templates/create_form.html" />
         <option value="$PROJECT_DIR$/Templates/welcome.html" />
         <option value="$PROJECT_DIR$/Templates/view_form.html" />
-        <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Templates/edit_form.html" />
+        <option value="$PROJECT_DIR$/Templates/requirements.txt" />
+        <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/requirements.txt" />
       </list>
     </option>
   </component>
@@ -164,6 +172,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -180,17 +189,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Template" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Template" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -249,7 +257,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1938046" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1938046" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -258,9 +266,9 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.11315417" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32956153" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -276,12 +284,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>82</line>
+          <line>79</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>86</line>
+          <line>83</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
@@ -366,27 +374,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/welcome.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/view_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="11" selection-start-line="7" selection-start-column="4" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Python/2.7/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
@@ -408,21 +395,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/welcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/view_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="11" selection-start-line="7" selection-start-column="4" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Templates/edit_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+        <state relative-caret-position="510">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
+        <state relative-caret-position="142">
+          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1551551303924" expanded="true" signature="2569:2999" ph="..." />
-            <marker date="1551551303924" expanded="true" signature="3016:3170" ph="..." />
+            <marker date="1551600256622" expanded="true" signature="2566:2996" ph="..." />
+            <marker date="1551600256622" expanded="true" signature="3013:3167" ph="..." />
           </folding>
         </state>
       </provider>
