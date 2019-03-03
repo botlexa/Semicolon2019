@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form_data</title>
+</head>
+<body>
+    <table border="1">
+        <h1> {{template_name}}</h1>
+        <tr>
+            {% for field_name in form_fields: %}
+            <th> {{field_name[0]}}</th>
+            {% endfor %}
+        </tr>
+        {% for data_tuple in data: %}
+        <tr>
+            {% for data_value in data_tuple: %}
+            <td>{{ data_value[0] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+
+    </table>
+</body>
+</html>
