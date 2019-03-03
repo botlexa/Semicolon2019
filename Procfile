@@ -1,0 +1,1 @@
+web: gunicorn botlexa-semicolon.wsgi:application --log-file -
