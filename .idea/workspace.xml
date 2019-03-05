@@ -7,13 +7,6 @@
       <change afterPath="$PROJECT_DIR$/../FirstWebProject/Project1/templates/login.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FirstWebProject/Project1/templates/result.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../FirstWebProject/Project1/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Templates/view_form_data.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/create_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/create_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/edit_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/edit_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/view_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/view_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Templates/welcome.html" beforeDir="false" afterPath="$PROJECT_DIR$/Templates/welcome.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Test" beforeDir="false" afterPath="$PROJECT_DIR$/../Test" afterDir="false" />
     </list>
@@ -60,7 +53,7 @@
           <entry key="Procfile" value="38" />
           <entry key="Python Console" value="39" />
           <entry key="html" value="1373" />
-          <entry key="py" value="2220" />
+          <entry key="py" value="2255" />
           <entry key="txt" value="107" />
         </counts>
       </usages-collector>
@@ -68,7 +61,7 @@
         <counts>
           <entry key="HTML" value="1373" />
           <entry key="PLAIN_TEXT" value="145" />
-          <entry key="Python" value="2259" />
+          <entry key="Python" value="2294" />
         </counts>
       </usages-collector>
     </session>
@@ -78,12 +71,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="55" column="65" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+            <state relative-caret-position="213">
+              <caret line="129" column="144" lean-forward="true" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="144" />
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
-                <marker date="1551806519605" expanded="true" signature="2622:4920" ph="..." />
-                <marker date="1551806519605" expanded="true" signature="4937:5090" ph="..." />
+                <marker date="1551810569610" expanded="true" signature="2622:4920" ph="..." />
+                <marker date="1551810569610" expanded="true" signature="4937:5151" ph="..." />
               </folding>
             </state>
           </provider>
@@ -308,13 +301,13 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.0" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31966054" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32956153" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.0" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.16124469" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -492,12 +485,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="55" column="65" selection-start-line="55" selection-start-column="65" selection-end-line="55" selection-end-column="65" />
+        <state relative-caret-position="213">
+          <caret line="129" column="144" lean-forward="true" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="144" />
           <folding>
             <element signature="e#0#74#0" expanded="true" />
-            <marker date="1551806519605" expanded="true" signature="2622:4920" ph="..." />
-            <marker date="1551806519605" expanded="true" signature="4937:5090" ph="..." />
+            <marker date="1551810569610" expanded="true" signature="2622:4920" ph="..." />
+            <marker date="1551810569610" expanded="true" signature="4937:5151" ph="..." />
           </folding>
         </state>
       </provider>
