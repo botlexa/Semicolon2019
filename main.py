@@ -53,9 +53,9 @@ def register_form():
 
 
     for x in val:
-        query_form_details = "insert into fieldmaster (fieldname,templatemasterid) values("
+        query_form_details = "insert into fieldmaster (fieldname ,ValueType ,templatemasterid) values("
         if re.search('^Field[0-9]+$',x):
-            query_form_details += "'"+ val[x] +"',"+str(form_id[0][0])+");"
+            query_form_details += "'" + val[x] + "'," + "'TEXT'" + "," + str(form_id[0][0]) + ");"
             try:
                 cur.execute(query_form_details)
             except Exception as e:
@@ -64,14 +64,14 @@ def register_form():
 
 @app.route('/edit_form')
 def edit_form():
-    cur = connection()
-    query_userid="select userid from usermaster where username="+"'"+session['username']+"';"
-    cur.execute(query_userid)
-    user_id = cur.fetchall()
-    query_form="select templatemasterid,templatename from templatemaster where userid="+str(user_id[0][0])+";"
-    cur.execute(query_form)
-    form_details = cur.fetchall()
-    return render_template('edit_form.html',form_details=form_details,flag="edit_form")
+    # cur = connection()
+    # query_userid="select userid from usermaster where username="+"'"+session['username']+"';"
+    # cur.execute(query_userid)
+    # user_id = cur.fetchall()
+    # query_form="select templatemasterid,templatename from templatemaster where userid="+str(user_id[0][0])+";"
+    # cur.execute(query_form)
+    # form_details = cur.fetchall()
+    return render_template('edit_form.html',form_details=get_form_details(),flag="edit_form")
 
 @app.route('/edit_form_data/<form_id>')
 def edit_form_data(form_id):
@@ -84,6 +84,48 @@ def edit_form_data(form_id):
     # field_name = cur.fetchall()
     return render_template('edit_form.html',field_name=field_name,flag="edit_form_data")
 
+@app.route('/view_forms')
+def view_forms():
+    return render_template('view_form.html', form_details=get_form_details())
+
+@app.route('/view_form_data/<form_id>')
+def view_form_data(form_id):
+    try:
+        cur = connection()
+        query_template_name = 'select templatename from templatemaster where templatemasterid = ' +form_id + ';'
+        cur.execute(query_template_name)
+        template_name = cur.fetchall()[0][0]
+        query_headers = 'select fieldname from fieldmaster where templatemasterid= '+form_id + ';'
+        cur.execute(query_headers)
+        headers = cur.fetchall()
+        temp_cust_mappings_query = 'select TemplateCustomerMappingID from TemplateCustomerMapping where TemplateMasterID='+str(form_id)
+        cur.execute(temp_cust_mappings_query)
+        temp_cust_mappings = cur.fetchall()
+        data = []
+        for mapping in temp_cust_mappings:
+            data_query = 'select FieldValue from FieldDetails where TemplateCustomerMappingID = '+str(mapping[0]) +\
+                         'and FieldMasterID IN (select FieldMasterID from FieldMaster where TemplateMasterID='+str(form_id) + ');'
+            cur.execute(data_query)
+            data.append(cur.fetchall())
+    finally:
+        if cur:
+            cur.close
+    return render_template('view_form_data.html', template_name=template_name, form_fields=headers, data=data)
+
+def get_form_details():
+    try:
+        cur = connection()
+        query_userid = "select userid from usermaster where username=" + "'" + session['username'] + "';"
+        cur.execute(query_userid)
+        user_id = cur.fetchall()
+        query_form = "select templatemasterid,templatename from templatemaster where userid=" + str(user_id[0][0]) + ";"
+        cur.execute(query_form)
+        form_details = cur.fetchall()
+    finally:
+        if cur:
+            cur.close
+    return form_details
+
 def connection():
     conn = psycopg2.connect(host='localhost', user='postgres', password='flipcart')
     conn.autocommit = True
@@ -93,4 +135,4 @@ def connection():
 
 
 if __name__=='__main__':
-    app.run(host="0.0.0.0", port =80 ,debug=True)
+    app.run(host="0.0.0.0", port =5000 ,debug=True)

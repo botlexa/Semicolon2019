@@ -12,7 +12,7 @@
             </tr>
             {% for form_id,form_name in form_details: %}
             <tr>
-                <td><a href="{{ 'http://0.0.0.0:80/edit_form_data/'+ form_id|string }}">{{ form_name }}</a></td>
+                <td><a href="{{ '/edit_form_data/'+ form_id|string }}">{{ form_name }}</a></td>
             </tr>
             {% endfor %}
         </table>

@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>user_forms</title>
 </head>
 <body>
-
+      <table border="1">
+        <tr>
+            <th>Form Name</th>
+        </tr>
+        {% for form_id,form_name in form_details: %}
+        <tr>
+            <td><a href="{{ 'http://localhost:5000/view_form_data/'+ form_id|string }}">{{ form_name }}</a></td>
+        </tr>
+        {% endfor %}
+      </table>
 </body>
 </html>
