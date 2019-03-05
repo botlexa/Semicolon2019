@@ -127,7 +127,7 @@ def get_form_details():
     return form_details
 
 def connection():
-    conn = psycopg2.connect(host='localhost', user='postgres', password='flipcart')
+    conn = psycopg2.connect(host='semicolon1.cpktx1w9iv0i.us-east-1.rds.amazonaws.com', user='utkarsh', password='semicolon',dbname='semicolon')
     conn.autocommit = True
     cur = conn.cursor()
     return cur
@@ -135,4 +135,4 @@ def connection():
 
 
 if __name__=='__main__':
-    app.run(host="0.0.0.0", port =5000 ,debug=True)
+    app.run(host="0.0.0.0", port =80 ,debug=True)
