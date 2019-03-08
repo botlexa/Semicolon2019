@@ -71,7 +71,7 @@ def edit_form():
     # query_form="select templatemasterid,templatename from templatemaster where userid="+str(user_id[0][0])+";"
     # cur.execute(query_form)
     # form_details = cur.fetchall()
-    return render_template('edit_form.html',form_details=get_form_details(),flag="edit_form")
+    return render_template('edit_form.html',form_details=get_form_details())
 
 @app.route('/edit_form_data/<form_id>')
 def edit_form_data(form_id):
@@ -82,15 +82,27 @@ def edit_form_data(form_id):
     # query_field_name = "select fieldname from where templatemasterid="+"'"+str(template_id)+"';"
     # cur.execute(query_field_name)
     # field_name = cur.fetchall()
-    return render_template('edit_form.html',field_name=field_name , form_id=form_id ,flag="edit_form_data")
+    return render_template('edit_form_data.html',field_name=field_name , form_id=form_id )
 
-@app.route('/edit_form_details/<form_id>')
+# @app.route('/edit_form_details/<form_id>')
+# def edit_form_details(form_id):
+#     cur=connection()
+#     query = 'select count(*) from fieldmaster where templatemasterid='+ form_id+';'
+#     cur.execute(query)
+#     count=cur.fetchall()
+#     return render_template('edit_form.html',form_id=form_id,count=count[0][0] ,flag='edit_form_details')
+
+@app.route("/edit_form_details/<form_id>",methods=['post'])
 def edit_form_details(form_id):
-    cur=connection()
-    query = 'select count(*) from fieldmaster where templatemasterid='+ form_id+';'
-    cur.execute(query)
-    count=cur.fetchall()
-    return render_template('edit_form.html',form_id=form_id,count=count[0][0] ,flag='edit_form_details')
+    val=request.form
+    cur = connection()
+    for x in val:
+        query_update = "UPDATE fieldmaster set fieldname = '" + val[x] + "' where fieldname ='" + x + "' and templatemasterid="+form_id
+        try:
+            cur.execute(query_update)
+        except Exception as e:
+            print e
+    return "done"
 
 @app.route('/view_forms')
 def view_forms():
@@ -120,24 +132,6 @@ def view_form_data(form_id):
             cur.close
     return render_template('view_form_data.html', template_name=template_name, form_fields=headers, data=data)
 
-@app.route('/edit_put_data/<form_id>' , methods=['POST'])
-def edit_put_data(form_id):
-    data =request.form
-    cur = connection()
-    query = 'select fieldmasterid from fieldmaster where templatemasterid=' + form_id + ';'
-    cur.execute(query)
-    first_id = cur.fetchall()[0][0]
-
-    for x in data:
-        query = 'select fieldname from fieldmaster where fieldmasterid=' + str(first_id) + ';'
-        cur.execute(query)
-        fieldname = cur.fetchall()[0][0]
-        query_update = "update fieldmaster set fieldname='"+data[x] + "' where fieldname='"+fieldname+"';"
-        cur.execute(query_update)
-        first_id=first_id+1
-
-    return "done"
-
 def get_form_details():
     try:
         cur = connection()
@@ -161,4 +155,4 @@ def connection():
 
 
 if __name__=='__main__':
-    app.run(host="0.0.0.0", port =5000 ,debug=True)
+    app.run(host="localhost", port =5000 ,debug=True)

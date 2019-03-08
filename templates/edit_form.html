@@ -5,7 +5,6 @@
     <title>edit_form</title>
 </head>
 <body>
-    {% if flag == 'edit_form'%}
         <table border="1">
             <tr>
                 <th>Form Name</th>
@@ -16,27 +15,5 @@
             </tr>
             {% endfor %}
         </table>
-    {% elif flag == 'edit_form_data' %}
-        <table border="1">
-            <tr>
-                {% for val in field_name: %}
-                    <td>{{ val[0] }}</td>
-                {% endfor %}
-
-                <td><a href="{{ '/edit_form_details/'+form_id|string}}"><input type="button" value="edit"/></a></td>
-            </tr>
-        </table>
-    {% elif flag == 'edit_form_details' %}
-        <table border="1">
-            <form action="{{'/edit_put_data/'+form_id|string}}" method="post">
-                {% for x in range(count): %}
-                <tr>
-                    <td><input type ="test" name="{{'Field' + x|string}}" /></td>
-                </tr>
-                {% endfor %}
-                <input type="submit"/>
-            </form>
-        </table>
-    {% endif %}
 </body>
 </html>

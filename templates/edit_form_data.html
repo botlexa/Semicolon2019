@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <table border="1">
+            <form action="{{'/edit_form_details/'+form_id|string}}" method="post">
+                <tr>
+                    {% for val in field_name: %}
+                        <td> <input type="text" name="{{val[0]}}" value="{{ val[0] }}"/> </td>
+                    {% endfor %}
+                    <td><input type="submit" /></td>
+                </tr>
+            </form>
+
+                <!--<td><a href="{{ '/edit_form_details/'+form_id|string}}"><input type="button" value="edit"/></a></td>-->
+    </table>
+</head>
+<body>
+
+</body>
+</html>
