@@ -12,7 +12,17 @@ def start():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+    if 'fail' in session:
+        session.pop('fail', None)
+        return render_template('login.html' , messege="fail")
+    else:
+        return render_template('login.html', messege="pass")
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    return redirect(url_for('login'))
+
 
 @app.route('/results' ,methods=['POST'])
 def result():
@@ -27,12 +37,17 @@ def result():
             if x[0] == username and x[1] == password:
                 session['username'] = username
                 return render_template('welcome.html', name=username, password=password)
-        return "username and password doesnt match"
+        session['fail']= "username or password dosen't match"
+        return redirect(url_for('login'))
 
+
+@app.route('/dashboard')
+def dashboard():
+    return render_template('welcome.html')
 
 @app.route('/create_form')
 def create_form():
-    return render_template('create_form.html')
+        return render_template('create_form.html')
 
 @app.route('/register_form', methods=['POST'])
 def register_form():
@@ -105,7 +120,7 @@ def edit_form_details(form_id):
             cur.execute(query_update)
         except Exception as e:
             print e
-    return "done"
+    return redirect(url_for('edit_form'))
 
 @app.route('/view_forms')
 def view_forms():
@@ -150,7 +165,7 @@ def get_form_details():
     return form_details
 
 def connection():
-    conn = psycopg2.connect(host='semicolon1.cpktx1w9iv0i.us-east-1.rds.amazonaws.com', user='utkarsh', password='semicolon',dbname='semicolon')
+    conn = psycopg2.connect(host='botlexa.cpfmcmy2jnz4.us-west-2.rds.amazonaws.com', user='botlexaUser', password='botlexa123',dbname='Alexa')
     conn.autocommit = True
     cur = conn.cursor()
     return cur
