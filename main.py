@@ -6,6 +6,9 @@ import psycopg2
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
+@app.route('/')
+def start():
+    return redirect(url_for('login'))
 
 @app.route('/login')
 def login():
@@ -60,7 +63,7 @@ def register_form():
                 cur.execute(query_form_details)
             except Exception as e:
                 return e
-    return "success"
+    return 'done'
 
 @app.route('/edit_form')
 def edit_form():
